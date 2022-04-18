@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Svelte Tutorial</title>
+    <link rel="stylesheet" href="./style/style.css"/>
+</head>
+<body>
+    <header>
+        <div class="colLeft">
+            <h1>
+                Svelte: Simplifying Reactive Development
+            </h1>
+            <br>
+            <p id="headerText">
+                Start by clicking on any of the below buttons for a quick explanation
+                into how to download Svelte, a brief history, and what makes
+                Svelte so beloved by developers.
+            </p>
+        </div>
+        <div class="colRight">
+            <img src="images/svelteLogo.png" alt="Svelte Logo" />
+        </div>
+        <div class="clear"></div>
+    </header>
+    <div class="sectionContainer">
+
+        <h1 class="sectionTitle">Installing Svelte</h1>
+        <ul>
+            <li>
+                <p>Open your command prompt and create a new project with </p>
+                <span class="codeSnippet">
+                    mkdir svelte-projects
+                </span>
+            </li>
+            <li>
+                <p>
+                    "Now enter the folder in the command line with
+                    <div class="codeSnippet"> cd svelte-project</div>
+                </p>
+            </li>
+            <li>
+                <p>
+                    You need Node.js installed in order to work with Svelete's command line tools.
+                    Go to this website to download Node.js for your
+                    website:
+                    <a href="https://nodejs.org/en/" target="_blank" rel="noopener noreferrer"> Node.js </a>
+                    <br>
+                    Make sure to download <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer"> Git</a> too,
+                    as it makes it possible to work with pre-defined templates from Svelte's support team.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Now that you have Git and Node.js downloaded, open a terminal
+                    in the folder you want to create your Svelte Project. Execute the following
+                    lines in the terminal
+                </p>
+                <div class="codeSnippet">
+                    <p>
+                        npx degit sveltejs/template my-svelte-directory
+                        cd my-svelte-directory
+                        npm install
+                    </p>
+                </div>
+            </li>
+            <li>
+                <p>
+                    The previous command created your project inside the directory,
+                    loaded it up with critical packages, and added files from Github's
+                    <a href="https://github.com/sveltejs/template" target="_blank" rel="noopener noreferrer"> sveltejs/template </a>
+                    repository.
+                </p>
+            </li>
+            <li>
+                <p>
+                    You can now run Svelte in your terminal using:
+                </p>
+                <span class="codeSnippet">
+                    npm run dev
+                </span>
+            </li>
+        </ul>
+    </div>
+    <!--Begin History Svelte -->
+    <div class="sectionContainer">
+        <h1 class="sectionTitle">Readable and Reusable Code</h1>
+        <ul class="listContainer">
+            <li>
+                <p>
+                    With Version 1 released in November, 2016, Svelte
+                    has grown to become one of the most well-loved JS development frameworks.
+                    In 2021, Stack Overflow named Svelte as the
+                    <a href="https://insights.stackoverflow.com/survey/2021/?utm_source=social-share&utm_medium=social&utm_campaign=dev-survey-2021" target="_blank" rel="noopener noreferrer"> most loved development frameworks. </a>
+                    This beat out ASP.NET Core, React.js, Vue.js, and Angular.js. And while excitement,
+                    does not always mean easy to learn, enthusiasm in open-source languages
+                    means more updates and available components as Svelte continues to grow in popularity.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p>
+                    Svelte's community is robust and supportive to new developers.
+                    A highlight when learning Svelte is the
+                    <a href="https://svelte.dev/repl/2c06d586d890466e8dc7da6fb111efb7?version=3.47.0" target="_blank" rel="noopener noreferrer"> REPL </a>
+                    ,a Read-Eval-Print-Loop in the Svelte website to demonstrate both examples as simple as a Hello-World program
+                    to complex functionalities that can be built out with reactive Svelte Modules.
+                </p><br>
+            </li>
+            <p>
+                Svelte's beauty is in how fast it is, with Richard Harris, the creator
+                of Svelte,
+                <a href="https://svelte.dev/blog/frameworks-without-the-framework" target="_blank" rel="noopener noreferrer"> claiming </a>
+                Svelte is basically as fast as vanilla Javacript and faster than Vue and React,
+                two of the more popular JS frameworks used in front end web development.
+            </p>
+            <li>
+                <p>
+                    What Marco, Ben, and I found most exciting about Svelte is how Svelte is not only new and fresh,
+                    but <strong>relevant</strong> Richard Harris' creation has been adopted by Facebook, Spotify, Apple, and
+                    The New York Times. Learning this framework can be critical for anyone looking to
+                    break through  in the industry as a front-end web developer.
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="sectionContainer">
+        <h1 class="sectionTitle">What Makes Svelte Special</h1>
+        <ul>
+            <li>
+                <h3>
+                    No Virtual DOM
+                </h3>
+                <p>
+                    When using a framework that utilizes a Virtual DOM, everytime your web application
+                    updates, a new Virtual DOM is created and the old DOM is reconciled against the new one,
+                    the web application is updated.
+                    Svelte skips the overhead of this, seeing the Virtual DOM operations as additional work to be done by the web app.
+                    Svelte is instead a <strong>compiler</strong> that knows at build time,
+                    rather than run time, what will change in your app. As Richard Harris writes in this
+                    <a href="https://svelte.dev/blog/virtual-dom-is-pure-overhead" target="_blank" rel="noopener noreferrer"> article </a>
+                    , "...you know what would be even faster [than the additional Virtual DOM operations]? Not using them."
+                </p>
+            </li>
+            <li>
+                <h3>Simplified Code</h3>
+                <p>
+                    Svelte is built on the premise of brevity and readability. Harris provides
+                    the example of a user
+                    <a href="https://svelte.dev/blog/write-less-code" target="_blank" rel="noopener noreferrer"> adding two numbers </a>
+                    in a web application.
+                <p>
+                    Below is how we program it in Svelte:<br/>
+                    <img id="lessCode" src="images/svelteLessCode.jpg" alt="Much less code." />
+                </p>
+                <p>
+                    Below is the exact same program in React:
+                <br />
+                <img id="moreCode" src="images/reactMoreCode.jpg" alt="Much more code." />
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="sectionContainer">
+        <script>
+
+    const reactiveExample = "$: doubled = number * 2";
+    const scriptTag = "< script > Insert all JavaScript Here< /script >\n";
+    const styleTag = "< style >Insert all CSS here< /style >\n";
+
+    const importComponent = "<ComponentName />";
+    const setMeOutside = "<ComponentName setMeOutside = {'This value is given to the component'}/>"
+        </script>
+
+        <h1>What We use in Nursery Online</h1>
+        <ul>
+            <li>
+                <h3>Reactive Assignments</h3>
+                <p>
+                    Svelte will automatically update the DOM whenever <strong>any</strong>
+                    component's state changes. Svelte has a built in reactive operator that
+                    recomputes values whenever any relevant part changes. Take a look at the below code:
+                    <div class="codeSnippet">
+                        $: doubled = number * 2;
+                    </div>
+                    The "$:" signifies this as reactive declaration. Whenever the "count" variable updates,
+                    the double variable will also update. 
+                </p>
+            </li>
+            <li>
+                <h3>Props and Components</h3>
+                <p>
+                    Svelte is built upon the idea of reusable and modular code. When designing this website,
+                    our group would load components into modules,vastly shortening not only the time it takes
+                    to write the code,but the amount of lines in the code.
+                </p>
+                <p>All Svelte components will be composed using the following template:</p>
+                <div class="codeSnippet">
+                 
+                        &lt;script&gt;<br />
+                        Insert all Business Logic here<br />
+                        &lt;/script&gt;<br />
+                        Insert all HTML here<br />
+                        &lt;style&gt;<br />
+                        Insert all Styling here<br />
+                        &lt;/style&gt;<br />
+                </div>
+            </li>
+            <li>
+                <p>Next you import the component into the desired module, inside the script section:</p>
+                <div class="codeSnippet">
+                    <p>
+                        &lt;import ComponentName from './pathOfComponent/Component.svelte';&gt;
+                    </p>
+                </div>
+                <p>
+                    Now whenever you need to access the component you can put it wherever it is needed within
+                    the main application. This can be on any line in your source code! It is inserted like so:
+                    <div class="codeSnippet">
+                        &lt;ComponentName /&gt;
+                    </div>
+                    This will run <strong>ALL</strong> the code from the imported component. This mean you have full control
+                    of where the JavaScript, HTML, and CSS will be executed in a component based on where it is injected.
+                    But what if you need to pass in a value into a component from an external module? This is where we used
+                    Svelte Props!
+            </li>
+            <li>
+                <h3>
+                    Props in Svelte
+                </h3>
+                <p>
+                    In order to pass a value into an external component, you must
+                    declare the variable with a name identical to the variable you wish to utilize
+                    within the component. Next, within the component, you are accessing
+                    you must add the <code>export</code> keyword in front of the variable:
+                    <div class="codeSnippet">
+                        export let setMeOutside;
+                    </div>
+                <p>
+                    The <code>export</code> keyword lets the compiler know this variable can be set
+                    outside of this component. Now return to the application using the component.
+                    Declare a variable in the script section with the same name, then pass it into the
+                    component like so:
+                        <div class="codeSnippet">
+                        let setMeOutside;<br />
+
+                        &lt;ComponentName setMeOutside = {'This value is given to the component'}/&gt;
+                </div>
+            </li>
+            <li>
+                <h3>Moving to our Web Application</h3>
+                <p>
+                    Our Web Application also heavily utilizes each loops, but thanks to Svelte
+                    we can write quick, iterative HTML code. We put each loops directly into the HTML code
+                    like so:
+                    <div class="codeSnippet">
+                        {#each Array for item(item.id)}
+                          <br />
+                         {/each}
+                    </div>
+                    This loop can contain any HTML elements within it, allowing you to iterate
+                    through an array, all while creating appropriate HTML elements.
+
+                </p>
+</li> 
+        </ul>
+
+    </div>
+</body>
+
+
+</html>
