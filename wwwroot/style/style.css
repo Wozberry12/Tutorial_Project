@@ -35,9 +35,10 @@ body {
 
 .accordionContainer {
     border: 2px solid black;
-    margin: 0px 2px;
-    padding: 0px;
+    margin: 1em 1em;
+    padding: 0;
     overflow: hidden;
+    width:95%;
 }
 
 div.sectionContainer {
