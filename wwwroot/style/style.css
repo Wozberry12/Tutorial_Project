@@ -33,7 +33,7 @@ body {
     overflow-x: hidden;
 }
 
-div.accordionContainer {
+.accordionContainer {
     border: 2px solid black;
     margin: 0px 2px;
     padding: 0px;
@@ -152,4 +152,10 @@ h3 {
 #moreCode {
     width: 400px;
     height: 300px;
+}
+
+footer{
+    text-align:right;
+    color:orangered;
+    padding:1em;
 }
